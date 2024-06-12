@@ -181,16 +181,66 @@ arr31 = np.array([[1,2,3,4], [5,6,7,8]])
 for idx, x in np.ndenumerate(arr31):
     print(idx, x)
 
+# NumPy Joining Array
+# Joining NumPy Arrays
+arr32 = np.array([1,2,3])
+arr33 = np.array([4,5,6])
+arr34 = np.concatenate((arr32, arr33))
+print(arr34)
+
+arr35 = np.array([[1,2], [3,4]])
+arr36 = np.array([[5,6], [7,8]])
+arr37 = np.concatenate((arr35, arr36), axis=1)
+print(arr37)
+
+# Joining Arrays Using Stack Functions
+arr38 = np.array([1,2,3])
+arr39 = np.array([4,5,6])
+arr40 = np.stack((arr38, arr39), axis=1)
+print(arr40)
 
 
+# Stacking Along Rows
+arr41 = np.array([1,2,3])
+arr42 = np.array([4,5,6])
+arr43 = np.hstack((arr41, arr42))
+print(arr43)
 
+# Stacking Along Columns
+arr44 = np.array([1,2,3])
+arr45 = np.array([4,5,6])
+arr46 = np.vstack((arr44, arr45))
+print(arr46)
 
+# Stacking Along Height (depth)
+arr47 = np.array([1,2,3])
+arr48 = np.array([4,5,6])
+arr49 = np.dstack((arr47, arr48))
+print(arr49)
 
+# NumPy Splitting Array
+# Splitting NumPy Arrays
+arr50 = np.array([1,2,3,4,5,6])
+newarr5 = np.array_split(arr50, 3)
+print(newarr5)
 
+# Splitting 2-D Arrays
+arr51 = np.array([[1,2], [3,4], [5,6], [7,8], [9,10], [11,12]])
+newarr6 = np.array_split(arr51, 3)
+print(newarr6)
 
+# Splitting Along Columns
+newarr7 = np.hsplit(arr51, 2)
+print(newarr7)
 
+# NumPy Searching Arrays
+# Searching Arrays
+arr52 = np.array([1,2,3,4,5,4,4])
+x = np.where(arr52 == 4)
+print(x)
 
-
-
-# Run the script
+# Find the indexes where the values are even
+arr53 = np.array([1,2,3,4,5,6,7,8])
+x = np.where(arr53%2 == 0)
+print(x)
 
