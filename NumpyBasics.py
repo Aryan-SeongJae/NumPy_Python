@@ -244,3 +244,44 @@ arr53 = np.array([1,2,3,4,5,6,7,8])
 x = np.where(arr53%2 == 0)
 print(x)
 
+
+# Search Sorted
+arr54 = np.array([6,7,8,9])
+x = np.searchsorted(arr54, 7)
+print(x)
+
+# Search From the Right Side
+arr55 = np.array([6,7,8,9])
+x = np.searchsorted(arr55, 7, side='right')
+print(x)
+
+# Multiple Values
+arr56 = np.array([1,3,5,7])
+x = np.searchsorted(arr56, [2,4,6])
+print(x)
+
+# NumPy Sorting Arrays
+# Sorting Arrays
+arr57 = np.array([3,2,0,1])
+print(np.sort(arr57))
+
+# Sorting 2-D Arrays
+arr58 = np.array([[3,2,4], [5,0,1]])
+print(np.sort(arr58))
+
+# NumPy Filter Array
+# Creating the Filter Array
+arr59 = np.array([41,42,43,44])
+x = [True, False, True, False]
+newarr8 = arr59[x]
+print(newarr8)
+
+
+# Create a filter array that will return only values higher than 42
+arr60 = np.array([41,42,43,44])
+filter_arr = arr60 > 42
+newarr9 = arr60[filter_arr]
+print(filter_arr)
+print(newarr9)
+
+
